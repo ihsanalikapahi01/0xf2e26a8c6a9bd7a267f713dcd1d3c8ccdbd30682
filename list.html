@@ -1,0 +1,3106 @@
+<!DOCTYPE html><html
+	class="hasSidebar hasPageActions hasBreadcrumb reference reference has-default-focus theme-light"
+	lang="en-us"
+	dir="ltr"
+	data-authenticated="false"
+	data-auth-status-determined="false"
+	data-target="docs"
+	x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Stats - List - REST API (Azure DevOps Git)" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://learn.microsoft.com/en-us/rest/api/azure/devops/git/stats/list?view=azure-devops-rest-7.1" /><meta property="og:description" content="Learn more about Git service - Retrieve statistics about all branches within a repository. " /><meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+
+	<meta property="og:image:alt" content="Microsoft Learn" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+
+	<meta name="twitter:site" content="@MicrosoftLearn" />
+
+	<meta name="color-scheme" content="light dark"><meta name="author" content="wnjenkin" />
+<meta name="breadcrumb_path" content="../../breadcrumb/toc.json" />
+<meta name="default_moniker" content="azure-devops-rest-7.1" />
+<meta name="depot_name" content="VS.vsts-docs-rest-apis" />
+<meta name="description" content="Learn more about Git service - Retrieve statistics about all branches within a repository. " />
+<meta name="document_id" content="0cd8f879-13e1-6879-645a-b856a8779964" />
+<meta name="document_version_independent_id" content="512cf747-ff62-4db9-e8d8-3c2800317c9c" />
+<meta name="feedback_help_link_type" content="" />
+<meta name="feedback_help_link_url" content="" />
+<meta name="feedback_product_url" content="https://developercommunity.visualstudio.com/spaces/21/index.html" />
+<meta name="feedback_system" content="GitHub" />
+<meta name="git_commit_id" content="0997b1abe735bdb9a70b62192c72672277af7734" />
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/vsts-docs-rest-apis/blob/0997b1abe735bdb9a70b62192c72672277af7734/docs-ref-autogen/7.1/git/Stats/List.yml" />
+<meta name="hideScope" content="true" />
+<meta name="locale" content="en-us" />
+<meta name="monikers" content="azure-devops-rest-7.1" />
+<meta name="ms.author" content="whjenkin" />
+<meta name="ms.devlang" content="rest-api" />
+<meta name="ms.service" content="azure-devops" />
+<meta name="ms.subservice" content="azure-devops-ref" />
+<meta name="ms.topic" content="language-reference" />
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/vsts-docs-rest-apis/blob/live/docs-ref-autogen/7.1/git/Stats/List.yml" />
+<meta name="page_kind" content="operation" />
+<meta name="page_type" content="rest" />
+<meta name="products" content="https://authoring-docs-microsoft.poolparty.biz/devrel/5bd2b3fa-c186-4b92-a3c8-09f22a249d37" />
+<meta name="rest_product" content="Azure DevOps" />
+<meta name="schema" content="RESTOperation" />
+<meta name="site_name" content="Docs" />
+<meta name="toc_rel" content="../../toc.json" />
+<meta name="uhfHeaderId" content="MSDocsHeader-AzureDevOps" />
+<meta name="uid" content="vsts.git.stats.list" />
+<meta name="updated_at" content="2022-12-28 09:24 AM" />
+<meta name="persistent_id" content="0b64a089-daf4-fc96-1fbe-3a01040279f0" />
+	
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/5bd2b3fa-c186-4b92-a3c8-09f22a249d37" data-source="generated" />
+	
+	<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/7eba7926-b7b2-4a7a-bf89-e6ac53b3e7f6" data-source="generated" />
+	<meta name="scope" content="Azure DevOps, REST" /><meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/vsts-docs-rest-apis/blob/live/docs-ref-autogen/7.1/git/Stats/List.yml" /><link href="https://learn.microsoft.com/en-us/rest/api/azure/devops/git/stats/list?view=azure-devops-rest-7.1" rel="canonical"><title>Stats - List - REST API (Azure DevOps Git) | Microsoft Learn</title><link rel="stylesheet" href="/static/assets/0.4.027355408/styles/site-ltr.css">
+
+	<script id="msdocs-script">
+	var msDocs = {environment: {
+			supportLevel: 'production',
+			accessLevel: 'online',
+			reviewFeatures: false,
+			systemContent: true,
+			azurePortalHostname: 'portal.azure.com',
+			legacyHosting: false,
+			siteName: 'learn',
+		},data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Reference',
+			brand: '',
+			context: {},
+			hasBinaryRating: true,
+			hasGithubIssues: true,
+			feedbackHelpLinkType:'',
+			feedbackHelpLinkUrl:'',
+			standardFeedback: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'GitHub',
+			feedbackGitHubRepo: 'MicrosoftDocs/vsts-rest-api-specs',
+			feedbackProductUrl: 'https://developercommunity.visualstudio.com/spaces/21/index.html',extendBreadcrumb: true,isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasPrintButton: true,
+			hasBookmark: true,
+			hasShare: true,
+			isPermissioned: false,
+			isPrivateUnauthorized: false,hasRecommendations: false,contributors: [{ name: "VSC-Service-Account", url: "https://github.com/VSC-Service-Account" }],},
+		functions:{}
+	};
+	</script><script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+	<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-4.min.js"></script><script src="/static/assets/0.4.027355408/global/deprecation.js"></script><script src="/static/assets/0.4.027355408/scripts/en-us/index-docs.js"></script></head>
+
+<body lang="en-us" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">Skip to main content</a>
+
+		<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+
+		<div id="unsupported-browser" style="
+			background-color: white;
+			color: black;
+			padding: 16px;
+			border-bottom: 1px solid grey;"
+			hidden
+		>
+			<div style="max-width: 800px; margin: 0 auto;">
+				<p style="font-size: 24px">This browser is no longer supported.</p>
+				<p style="font-size: 16px; margin-top: 16px;">Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.</p>
+				<div style="margin-top: 12px;">
+					<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+						style="
+						background-color: #0078d4;
+						border: 1px solid #0078d4;
+						color: white;
+						padding: 6px 12px;
+						border-radius: 2px;
+						display: inline-block;
+						">Download Microsoft Edge</a>
+					<a href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+						style="
+							background-color: white;
+							padding: 6px 12px;
+							border: 1px solid #505050;
+							color: #171717;
+							border-radius: 2px;
+							display: inline-block;
+							">More info about Internet Explorer and Microsoft Edge</a>
+				</div>
+			</div>
+		</div>
+		<!-- liquid-tag banners global -->
+
+		<!-- site header -->
+		<header id="ms--site-header" data-test-id="site-header-wrapper" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+			<div id="ms--mobile-nav" class="site-header display-none-tablet padding-inline-none gap-none" data-bi-name="mobile-header" data-test-id="mobile-header"></div>
+			<div id="ms--primary-nav" class="site-header display-none display-flex-tablet" data-bi-name="L1-header" data-test-id="primary-header"></div>
+			<div id="ms--secondary-nav" class="site-header display-none display-flex-tablet" data-bi-name="L2-header" data-test-id="secondary-header"></div>
+		</header><div id="content-header" class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+				<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+					<button type="button" class="contents-button button button-sm margin-right-xxs" data-bi-name="contents-expand" aria-haspopup="true" data-contents-button>
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">Table of contents</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button button-sm" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>Exit focus mode</span>
+					</button>
+				</div>
+			</div><div id="disclaimer-holder" class="has-overflow-hidden has-default-focus">
+			<!-- liquid-tag banners sectional -->
+		</div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile "><div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="margin-top-sm-tablet position-sticky display-flex flex-direction-column" aria-label="Primary"></nav>
+			</div><!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps "><div id="main-column" class="column  is-full is-8-desktop">
+
+						<main id="main" class="" role="main" data-bi-name="content" lang="en-us" dir="ltr"><!-- article-header -->
+							<div id="article-header" class="background-color-body margin-top-sm-tablet margin-bottom-xs display-none-print">
+								<div class="display-flex align-items-center "><details id="article-header-breadcrumbs-overflow-popover" class="popover" data-for="article-header-breadcrumbs">
+										<summary class="button button-clear button-primary button-sm inner-focus" aria-label="All breadcrumbs">
+											<span class="icon">
+												<span class="docon docon-more"></span>
+											</span>
+										</summary>
+										<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none">
+
+										</div>
+									</details>
+
+									<bread-crumbs id="article-header-breadcrumbs" data-test-id="article-header-breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"></bread-crumbs><div id="article-header-page-actions"  class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch"><a
+											id="lang-link-tablet"
+											class="button button-primary button-clear button-sm display-none display-inline-flex-tablet"
+											title="Read in English" data-bi-name="language-toggle"
+											data-read-in-link
+											hidden>
+											<span class="icon margin-none" aria-hidden="true" data-read-in-link-icon>
+												<span class="docon docon-locale-globe"></span>
+											</span>
+											<span class="is-visually-hidden" data-read-in-link-text>Read in English</span>
+										</a><button
+												type="button"
+												class="collection button button-clear button-sm button-primary display-none display-inline-flex-tablet"
+												data-list-type="collection"
+												data-bi-name="collection"
+												title="Add to collection">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-circle-addition"></span>
+												</span>
+												<span class="collection-status is-visually-hidden">Save</span>
+											</button><a	data-contenteditbtn
+												class="button button-clear button-sm text-decoration-none button-primary display-none display-inline-flex-tablet"
+												aria-label="Edit"
+												title="Edit This Document"
+												data-bi-name="edit"
+													hidden
+														href="https://github.com/MicrosoftDocs/vsts-docs-rest-apis/blob/live/docs-ref-autogen/7.1/git/Stats/List.yml">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-edit-outline"></span>
+												</span>
+											</a>
+										<details class="popover popover-right" id="article-header-page-actions-overflow">
+											<summary class="justify-content-flex-start button button-clear button-sm button-primary" aria-label="More actions" title="More actions">
+												<span class="icon" aria-hidden="true">
+													<span class="docon docon-more-vertical"></span>
+												</span>
+											</summary>
+											<div class="popover-content padding-xs"><button
+														data-page-action-item="overflow-mobile"
+														type="button"
+														class="justify-content-flex-start button-block button-sm has-inner-focus button button-clear display-none-tablet"
+														data-bi-name="contents-expand"
+														data-contents-button
+														data-popover-close>
+														<span class="icon">
+															<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+														</span><span class="contents-expand-title">Table of contents</span></button><a
+													id="lang-link-overflow"
+													class="justify-content-flex-start button-sm has-inner-focus button button-clear button-block display-none-tablet"
+													title="Read in English" data-bi-name="language-toggle"
+													data-page-action-item="overflow-mobile"
+													data-check-hidden="true"
+													data-read-in-link
+													hidden
+													>
+													<span class="icon" aria-hidden="true" data-read-in-link-icon>
+														<span class="docon docon-locale-globe"></span>
+													</span>
+													<span data-read-in-link-text>Read in English</span>
+												</a><button
+														type="button"
+														class="collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet"
+														data-list-type="collection"
+														data-bi-name="collection"
+														title="Save"
+														data-page-action-item="overflow-mobile"
+														data-check-hidden="true"
+														data-popover-close>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-circle-addition"></span>
+														</span>
+														<span class="collection-status">Save</span>
+													</button>
+
+			 										
+													<button
+													 	type="button"
+														class="collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet"
+														data-list-type="plan"
+														data-bi-name="plan"
+														title="Add to Plan"
+														data-page-action-item="overflow-mobile"
+														data-check-hidden="true"
+														data-popover-close
+														hidden>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-circle-addition"></span>
+														</span>
+														<span class="plan-status">Add to Plan</span>
+													</button><a	data-contenteditbtn
+														class="button button-clear button-block button-sm has-inner-focus justify-content-flex-start text-decoration-none display-none-tablet"
+														aria-label="Edit"
+														title="Edit This Document"
+														data-bi-name="edit"
+															hidden
+																href="https://github.com/MicrosoftDocs/vsts-docs-rest-apis/blob/live/docs-ref-autogen/7.1/git/Stats/List.yml">
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-edit-outline"></span>
+														</span>
+														<span>Edit</span>
+													</a><div aria-hidden="true" class="margin-none" data-page-action-item="overflow-all"></div>
+														<hr class="display-none-tablet margin-bottom-xxs margin-top-xxs" />
+														<h4 class="font-size-sm padding-left-xxs">Share via</h4>
+
+													<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-facebook" data-bi-name="facebook" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-facebook-share font-size-md color-primary"></span>
+															</span>
+															<span class="margin-left-xxs">Facebook</span>
+														</a>
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-twitter" data-bi-name="twitter" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-xlogo-share font-size-xxs"></span>
+															</span>
+															<span class="margin-left-xxs">x.com</span>
+														</a>
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-linkedin" data-bi-name="linkedin" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-linked-in-logo font-size-sm color-primary"></span>
+															</span>
+															<span class="margin-left-xxs">LinkedIn</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start margin-bottom-xxs share-email" data-bi-name="email" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-mail-message font-size-sm color-primary"></span>
+															</span>
+															<span class="margin-left-xxs">Email</span>
+														</a><hr />
+													<button
+														class="button button-block button-clear button-sm justify-content-flex-start has-inner-focus margin-top-xxs"
+														title="Print"
+														type="button"
+														aria-label="Print"
+														data-bi-name="print"
+														data-page-action-item="overflow-all"
+														data-popover-close
+														data-print-page
+														data-check-hidden="true">
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-print font-size-sm color-primary"></span>
+														</span>
+														<span class="margin-left-xxs">Print</span>
+													</button>
+											</div>
+										</details>
+										
+									</div></div>
+							</div>
+							<!-- end article-header --><div>
+								<button type="button" class="border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus" data-bi-name="contents-expand" data-contents-button hidden>
+									<span class="icon">
+										<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+									</span><span class="contents-expand-title">Table of contents</span></button>
+							</div><!-- end mobile-contents button  -->
+
+							<div class="content "><!-- <content> -->
+
+
+<h1>Stats - List</h1>
+<div class="display-flex-tablet justify-content-space-between-tablet">
+	<ul class="metadata page-metadata align-items-center" data-bi-name="page info">
+		<li>Reference</li>
+	</ul>
+<div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived="">
+	<button id="user-feedback-button" data-test-id="conceptual-feedback-button" class="button button-sm button-clear button-primary" type="button" data-bi-name="user-feedback-button" data-user-feedback-button="">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-like"></span>
+		</span>
+		<span>Feedback</span>
+	</button>
+</div>
+</div>
+<div id="ms--inline-notifications" class="margin-block-xxs"></div>
+
+<div class="metadata" data-bi-name="page info">
+		<dl class="attributeList">
+			<dt>Service:</dt>
+			<dd>
+				Git
+			</dd>
+		</dl>
+		<dl class="attributeList">
+			<dt>API Version:</dt>
+			<dd>
+				7.1-preview.1
+			</dd>
+		</dl>
+</div>
+
+<nav id="center-doc-outline" class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm" data-bi-name="intopic toc" aria-label="">
+  <h2 class="title is-6 margin-block-xs"></h2>
+</nav>
+
+<section class="rest-reference-content">
+
+
+
+	<p>Retrieve statistics about all branches within a repository.</p>
+
+
+	
+
+
+		<pre><code class="lang-http" dir="ltr">GET https://dev.azure.com/{organization}/{project}/_apis/git/repositories/{repositoryId}/stats/branches?api-version=7.1-preview.1</code></pre>
+
+			<div class="example-block">
+				<div class="metadata">
+					With optional parameters:
+				</div>
+
+		<pre><code class="lang-http" dir="ltr">GET https://dev.azure.com/{organization}/{project}/_apis/git/repositories/{repositoryId}/stats/branches?baseVersionDescriptor.version={baseVersionDescriptor.version}&amp;baseVersionDescriptor.versionOptions={baseVersionDescriptor.versionOptions}&amp;baseVersionDescriptor.versionType={baseVersionDescriptor.versionType}&amp;api-version=7.1-preview.1</code></pre>
+
+			</div>
+
+		<h2 id="uri-parameters">URI Parameters</h2>
+		<table class="parameters">
+			<tbody><tr>
+				<th>Name</th>
+				<th>In</th>
+				<th>Required</th>
+				<th>Type</th>
+				<th>Description</th>
+			</tr>
+				<tr>
+					<td>
+						<div class="parameterName">organization</div>
+					</td>
+					<td>path</td>
+					<td>
+							True
+					</td>
+					<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+					</td>
+					<td>
+						<p>The name of the Azure DevOps organization.</p>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="parameterName">repository<wbr>Id</div>
+					</td>
+					<td>path</td>
+					<td>
+							True
+					</td>
+					<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+					</td>
+					<td>
+						<p>The name or ID of the repository.</p>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="parameterName">project</div>
+					</td>
+					<td>path</td>
+					<td>
+					</td>
+					<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+					</td>
+					<td>
+						<p>Project ID or project name</p>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="parameterName">api-version</div>
+					</td>
+					<td>query</td>
+					<td>
+							True
+					</td>
+					<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+					</td>
+					<td>
+						<p>Version of the API to use.  This should be set to '7.1-preview.1' to use this version of the api.</p>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="parameterName">base<wbr>Version<wbr>Descriptor.<wbr>version</div>
+					</td>
+					<td>query</td>
+					<td>
+					</td>
+					<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+					</td>
+					<td>
+						<p>Version string identifier (name of tag/branch, SHA1 of commit)</p>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="parameterName">base<wbr>Version<wbr>Descriptor.<wbr>version<wbr>Options</div>
+					</td>
+					<td>query</td>
+					<td>
+					</td>
+					<td>
+
+			<p>
+	<a href="#gitversionoptions" data-linktype="self-bookmark">Git<wbr>Version<wbr>Options</a>
+
+			</p>
+
+	
+					</td>
+					<td>
+						<p>Version options - Specify additional modifiers to version (e.g Previous)</p>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="parameterName">base<wbr>Version<wbr>Descriptor.<wbr>version<wbr>Type</div>
+					</td>
+					<td>query</td>
+					<td>
+					</td>
+					<td>
+
+			<p>
+	<a href="#gitversiontype" data-linktype="self-bookmark">Git<wbr>Version<wbr>Type</a>
+
+			</p>
+
+	
+					</td>
+					<td>
+						<p>Version type (branch, tag, or commit). Determines how Id is interpreted</p>
+
+					</td>
+				</tr>
+		</tbody></table>
+
+
+
+		<h2 id="response">Responses</h2>
+		<table class="parameters definitions">
+			<tbody><tr>
+				<th>Name</th>
+				<th>Type</th>
+				<th>Description</th>
+			</tr>
+<tr>
+	<td>
+		200 OK
+	</td>
+		<td>
+
+			<p>
+	<a href="#gitbranchstats" data-linktype="self-bookmark">Git<wbr>Branch<wbr>Stats</a>[]
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>successful operation</p>
+
+	</td>
+</tr>
+		</tbody></table>
+
+
+
+		<h2 id="security">Security</h2>
+			<h3>oauth2</h3>
+			
+			<p>
+					<span class="font-weight-semibold">Type: </span>
+					oauth2<br>
+					<span class="font-weight-semibold">Flow: </span>
+					accessCode<br>
+					<span class="font-weight-semibold">Authorization URL: </span>
+					https://app.vssps.visualstudio.com/oauth2/authorize&amp;response_type=Assertion<br>
+					<span class="font-weight-semibold">Token URL: </span>
+					https://app.vssps.visualstudio.com/oauth2/token?client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&amp;grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer<br>
+			</p>
+				<h4>Scopes</h4>
+				<table>
+					<tbody><tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+						<tr>
+							<td>
+								vso.code
+							</td>
+							<td>
+								Grants the ability to read source code and metadata about commits, changesets, branches, and other version control artifacts. Also grants the ability to search code and get notified about version control events via service hooks.
+							</td>
+						</tr>
+				</tbody></table>
+
+		<h2 id="examples">Examples</h2>
+				<h3 id="for-all-branches">For all branches</h3>
+			<div class="example-block">
+				<h4>Sample Request</h4>
+						<div class="tabGroup" id="tabgroup_1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_1_HTTP" role="tab" aria-controls="tabpanel_1_HTTP" data-tab="HTTP" tabindex="0" aria-selected="true" data-linktype="self-bookmark">HTTP</a>
+</li>
+</ul>
+<section id="tabpanel_1_HTTP" role="tabpanel" data-tab="HTTP">
+
+<pre><code class="lang-http">GET https://dev.azure.com/fabrikam/_apis/git/repositories/278d5cd2-584d-4b63-824a-2ba458937249/stats/branches?api-version=7.1-preview.1
+</code></pre>
+</section>
+</div>
+
+			</div>
+				<div class="example-block">
+					<h4>Sample Response</h4>
+						<div class="metadata">
+								<dl class="attributeList">
+									<dt>Status code: </dt>
+									<dd>
+										200
+									</dd>
+								</dl>
+						</div>
+							<pre><code class="lang-json" dir="ltr">{
+  "count": 3,
+  "value": [
+    {
+      "commit": {
+        "commitId": "67cae2b029dff7eb3dc062b49403aaedca5bad8d",
+        "author": {
+          "name": "Chuck Reinhart",
+          "email": "fabrikamfiber3@hotmail.com",
+          "date": "2014-01-29T23:52:56Z"
+        },
+        "committer": {
+          "name": "Chuck Reinhart",
+          "email": "fabrikamfiber3@hotmail.com",
+          "date": "2014-01-29T23:52:56Z"
+        },
+        "comment": "home page",
+        "url": "https://dev.azure.com/fabrikam/_apis/git/repositories/278d5cd2-584d-4b63-824a-2ba458937249/commits/67cae2b029dff7eb3dc062b49403aaedca5bad8d"
+      },
+      "name": "develop",
+      "aheadCount": 1,
+      "behindCount": 17,
+      "isBaseVersion": false
+    },
+    {
+      "commit": {
+        "parents": [
+          "fe17a84cc2dfe0ea3a2202ab4dbac0706058e41f"
+        ],
+        "treeId": "8263e7232a2331c563d737e4fc4e9c66a8286c63",
+        "commitId": "23d0bc5b128a10056dc68afece360d8a0fabb014",
+        "author": {
+          "name": "Norman Paulk",
+          "email": "Fabrikamfiber16@hotmail.com",
+          "date": "2014-06-30T18:10:55Z"
+        },
+        "committer": {
+          "name": "Norman Paulk",
+          "email": "Fabrikamfiber16@hotmail.com",
+          "date": "2014-06-30T18:10:55Z"
+        },
+        "comment": "Better description for hello world\n",
+        "url": "https://dev.azure.com/fabrikam/_apis/git/repositories/278d5cd2-584d-4b63-824a-2ba458937249/commits/23d0bc5b128a10056dc68afece360d8a0fabb014"
+      },
+      "name": "master",
+      "aheadCount": 0,
+      "behindCount": 0,
+      "isBaseVersion": true
+    },
+    {
+      "commit": {
+        "parents": [
+          "fe17a84cc2dfe0ea3a2202ab4dbac0706058e41f"
+        ],
+        "treeId": "8263e7232a2331c563d737e4fc4e9c66a8286c63",
+        "commitId": "23d0bc5b128a10056dc68afece360d8a0fabb014",
+        "author": {
+          "name": "Norman Paulk",
+          "email": "Fabrikamfiber16@hotmail.com",
+          "date": "2014-06-30T18:10:55Z"
+        },
+        "committer": {
+          "name": "Norman Paulk",
+          "email": "Fabrikamfiber16@hotmail.com",
+          "date": "2014-06-30T18:10:55Z"
+        },
+        "comment": "Better description for hello world\n",
+        "url": "https://dev.azure.com/fabrikam/_apis/git/repositories/278d5cd2-584d-4b63-824a-2ba458937249/commits/23d0bc5b128a10056dc68afece360d8a0fabb014"
+      },
+      "name": "npaulk/feature",
+      "aheadCount": 0,
+      "behindCount": 0,
+      "isBaseVersion": true
+    }
+  ]
+}</code></pre>
+				</div>
+
+		<h2 id="definitions">Definitions</h2>
+			<table class="table">
+				<tbody><tr>
+					<th>Name</th>
+					<th>Description</th>
+				</tr>
+					<tr>
+						<td>
+							<a href="#changecountdictionary" data-linktype="self-bookmark">Change<wbr>Count<wbr>Dictionary</a>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#gitbranchstats" data-linktype="self-bookmark">Git<wbr>Branch<wbr>Stats</a>
+						</td>
+						<td>
+							<p>Ahead and behind counts for a particular ref.</p>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#gitchange" data-linktype="self-bookmark">Git<wbr>Change</a>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#gitcommitref" data-linktype="self-bookmark">Git<wbr>Commit<wbr>Ref</a>
+						</td>
+						<td>
+							<p>Provides properties that describe a Git commit and associated metadata.</p>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#gitpushref" data-linktype="self-bookmark">Git<wbr>Push<wbr>Ref</a>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#gitstatus" data-linktype="self-bookmark">Git<wbr>Status</a>
+						</td>
+						<td>
+							<p>This class contains the metadata of a service/extension posting a status.</p>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#gitstatuscontext" data-linktype="self-bookmark">Git<wbr>Status<wbr>Context</a>
+						</td>
+						<td>
+							<p>Status context that uniquely identifies the status.</p>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#gitstatusstate" data-linktype="self-bookmark">Git<wbr>Status<wbr>State</a>
+						</td>
+						<td>
+							<p>State of the status.</p>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#gittemplate" data-linktype="self-bookmark">Git<wbr>Template</a>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#gituserdate" data-linktype="self-bookmark">Git<wbr>User<wbr>Date</a>
+						</td>
+						<td>
+							<p>User info and date for Git operations.</p>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#gitversionoptions" data-linktype="self-bookmark">Git<wbr>Version<wbr>Options</a>
+						</td>
+						<td>
+							<p>Version options - Specify additional modifiers to version (e.g Previous)</p>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#gitversiontype" data-linktype="self-bookmark">Git<wbr>Version<wbr>Type</a>
+						</td>
+						<td>
+							<p>Version type (branch, tag, or commit). Determines how Id is interpreted</p>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#identityref" data-linktype="self-bookmark">Identity<wbr>Ref</a>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#itemcontent" data-linktype="self-bookmark">Item<wbr>Content</a>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#itemcontenttype" data-linktype="self-bookmark">Item<wbr>Content<wbr>Type</a>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#referencelinks" data-linktype="self-bookmark">Reference<wbr>Links</a>
+						</td>
+						<td>
+							<p>The class to represent a collection of REST reference links.</p>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#resourceref" data-linktype="self-bookmark">Resource<wbr>Ref</a>
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#versioncontrolchangetype" data-linktype="self-bookmark">Version<wbr>Control<wbr>Change<wbr>Type</a>
+						</td>
+						<td>
+							<p>The type of change that was made to the item.</p>
+
+						</td>
+					</tr>
+			</tbody></table>
+			<h3 id="changecountdictionary">Change<wbr>Count<wbr>Dictionary</h3>
+			
+			<h3 id="gitbranchstats">Git<wbr>Branch<wbr>Stats</h3>
+			<p>Ahead and behind counts for a particular ref.</p>
+
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		aheadCount
+	</td>
+		<td>
+
+			<p>
+	integer
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Number of commits ahead.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		behindCount
+	</td>
+		<td>
+
+			<p>
+	integer
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Number of commits behind.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		commit
+	</td>
+		<td>
+
+			<p>
+	<a href="#gitcommitref" data-linktype="self-bookmark">Git<wbr>Commit<wbr>Ref</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Current commit.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		isBaseVersion
+	</td>
+		<td>
+
+			<p>
+	boolean
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>True if this is the result for the base version.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		name
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Name of the ref.</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="gitchange">Git<wbr>Change</h3>
+			
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		changeId
+	</td>
+		<td>
+
+			<p>
+	integer
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>ID of the change within the group of changes.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		changeType
+	</td>
+		<td>
+
+			<p>
+	<a href="#versioncontrolchangetype" data-linktype="self-bookmark">Version<wbr>Control<wbr>Change<wbr>Type</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>The type of change that was made to the item.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		item
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Current version.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		newContent
+	</td>
+		<td>
+
+			<p>
+	<a href="#itemcontent" data-linktype="self-bookmark">Item<wbr>Content</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Content of the item after the change.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		newContentTemplate
+	</td>
+		<td>
+
+			<p>
+	<a href="#gittemplate" data-linktype="self-bookmark">Git<wbr>Template</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>New Content template to be used when pushing new changes.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		originalPath
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Original path of item if different from current path.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		sourceServerItem
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Path of the item on the server.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		url
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>URL to retrieve the item.</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="gitcommitref">Git<wbr>Commit<wbr>Ref</h3>
+			<p>Provides properties that describe a Git commit and associated metadata.</p>
+
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		_links
+	</td>
+		<td>
+
+			<p>
+	<a href="#referencelinks" data-linktype="self-bookmark">Reference<wbr>Links</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>A collection of related REST reference links.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		author
+	</td>
+		<td>
+
+			<p>
+	<a href="#gituserdate" data-linktype="self-bookmark">Git<wbr>User<wbr>Date</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Author of the commit.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		changeCounts
+	</td>
+		<td>
+
+			<p>
+	<a href="#changecountdictionary" data-linktype="self-bookmark">Change<wbr>Count<wbr>Dictionary</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Counts of the types of changes (edits, deletes, etc.) included with the commit.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		changes
+	</td>
+		<td>
+
+			<p>
+	<a href="#gitchange" data-linktype="self-bookmark">Git<wbr>Change</a>[]
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>An enumeration of the changes included with the commit.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		comment
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Comment or message of the commit.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		commentTruncated
+	</td>
+		<td>
+
+			<p>
+	boolean
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Indicates if the comment is truncated from the full Git commit comment message.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		commitId
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>ID (SHA-1) of the commit.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		commitTooManyChanges
+	</td>
+		<td>
+
+			<p>
+	boolean
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Indicates that commit contains too many changes to be displayed</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		committer
+	</td>
+		<td>
+
+			<p>
+	<a href="#gituserdate" data-linktype="self-bookmark">Git<wbr>User<wbr>Date</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Committer of the commit.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		parents
+	</td>
+		<td>
+
+			<p>
+	string[]
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>An enumeration of the parent commit IDs for this commit.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		push
+	</td>
+		<td>
+
+			<p>
+	<a href="#gitpushref" data-linktype="self-bookmark">Git<wbr>Push<wbr>Ref</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>The push associated with this commit.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		remoteUrl
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Remote URL path to the commit.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		statuses
+	</td>
+		<td>
+
+			<p>
+	<a href="#gitstatus" data-linktype="self-bookmark">Git<wbr>Status</a>[]
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>A list of status metadata from services and extensions that may associate additional information to the commit.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		url
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>REST URL for this resource.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		workItems
+	</td>
+		<td>
+
+			<p>
+	<a href="#resourceref" data-linktype="self-bookmark">Resource<wbr>Ref</a>[]
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>A list of workitems associated with this commit.</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="gitpushref">Git<wbr>Push<wbr>Ref</h3>
+			
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		_links
+	</td>
+		<td>
+
+			<p>
+	<a href="#referencelinks" data-linktype="self-bookmark">Reference<wbr>Links</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>The class to represent a collection of REST reference links.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		date
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		pushId
+	</td>
+		<td>
+
+			<p>
+	integer
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		pushedBy
+	</td>
+		<td>
+
+			<p>
+	<a href="#identityref" data-linktype="self-bookmark">Identity<wbr>Ref</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		url
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="gitstatus">Git<wbr>Status</h3>
+			<p>This class contains the metadata of a service/extension posting a status.</p>
+
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		_links
+	</td>
+		<td>
+
+			<p>
+	<a href="#referencelinks" data-linktype="self-bookmark">Reference<wbr>Links</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Reference links.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		context
+	</td>
+		<td>
+
+			<p>
+	<a href="#gitstatuscontext" data-linktype="self-bookmark">Git<wbr>Status<wbr>Context</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Context of the status.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		createdBy
+	</td>
+		<td>
+
+			<p>
+	<a href="#identityref" data-linktype="self-bookmark">Identity<wbr>Ref</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Identity that created the status.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		creationDate
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Creation date and time of the status.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		description
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Status description. Typically describes current state of the status.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		id
+	</td>
+		<td>
+
+			<p>
+	integer
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Status identifier.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		state
+	</td>
+		<td>
+
+			<p>
+	<a href="#gitstatusstate" data-linktype="self-bookmark">Git<wbr>Status<wbr>State</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>State of the status.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		targetUrl
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>URL with status details.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		updatedDate
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Last update date and time of the status.</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="gitstatuscontext">Git<wbr>Status<wbr>Context</h3>
+			<p>Status context that uniquely identifies the status.</p>
+
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		genre
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Genre of the status. Typically name of the service/tool generating the status, can be empty.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		name
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Name identifier of the status, cannot be null or empty.</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="gitstatusstate">Git<wbr>Status<wbr>State</h3>
+			<p>State of the status.</p>
+
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		error
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Status with an error.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		failed
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Status failed.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		notApplicable
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Status is not applicable to the target object.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		notSet
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Status state not set. Default state.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		pending
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Status pending.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		succeeded
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Status succeeded.</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="gittemplate">Git<wbr>Template</h3>
+			
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		name
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Name of the Template</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		type
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Type of the Template</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="gituserdate">Git<wbr>User<wbr>Date</h3>
+			<p>User info and date for Git operations.</p>
+
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		date
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Date of the Git operation.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		email
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Email address of the user performing the Git operation.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		imageUrl
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Url for the user's avatar.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		name
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Name of the user performing the Git operation.</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="gitversionoptions">Git<wbr>Version<wbr>Options</h3>
+			<p>Version options - Specify additional modifiers to version (e.g Previous)</p>
+
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		firstParent
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>First parent of commit (HEAD^)</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		none
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Not specified</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		previousChange
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Commit that changed item prior to the current version</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="gitversiontype">Git<wbr>Version<wbr>Type</h3>
+			<p>Version type (branch, tag, or commit). Determines how Id is interpreted</p>
+
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		branch
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Interpret the version as a branch name</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		commit
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Interpret the version as a commit ID (SHA1)</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		tag
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Interpret the version as a tag name</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="identityref">Identity<wbr>Ref</h3>
+			
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		_links
+	</td>
+		<td>
+
+			<p>
+	<a href="#referencelinks" data-linktype="self-bookmark">Reference<wbr>Links</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>This field contains zero or more interesting links about the graph subject. These links may be invoked to obtain additional relationships or more detailed information about this graph subject.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		descriptor
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the same graph subject across both Accounts and Organizations.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		directoryAlias
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Deprecated - Can be retrieved by querying the Graph user referenced in the "self" entry of the IdentityRef "_links" dictionary</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		displayName
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>This is the non-unique display name of the graph subject. To change this field, you must alter its value in the source provider.</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		id
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		imageUrl
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Deprecated - Available in the "avatar" entry of the IdentityRef "_links" dictionary</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		inactive
+	</td>
+		<td>
+
+			<p>
+	boolean
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Deprecated - Can be retrieved by querying the Graph membership state referenced in the "membershipState" entry of the GraphUser "_links" dictionary</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		isAadIdentity
+	</td>
+		<td>
+
+			<p>
+	boolean
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsAadUserType/Descriptor.IsAadGroupType)</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		isContainer
+	</td>
+		<td>
+
+			<p>
+	boolean
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsGroupType)</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		isDeletedInOrigin
+	</td>
+		<td>
+
+			<p>
+	boolean
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		profileUrl
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Deprecated - not in use in most preexisting implementations of ToIdentityRef</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		uniqueName
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>Deprecated - use Domain+PrincipalName instead</p>
+
+	</td>
+</tr>
+<tr>
+	<td>
+		url
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>This url is the full route to the source resource of this graph subject.</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="itemcontent">Item<wbr>Content</h3>
+			
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		content
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		contentType
+	</td>
+		<td>
+
+			<p>
+	<a href="#itemcontenttype" data-linktype="self-bookmark">Item<wbr>Content<wbr>Type</a>
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="itemcontenttype">Item<wbr>Content<wbr>Type</h3>
+			
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		base64Encoded
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		rawText
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="referencelinks">Reference<wbr>Links</h3>
+			<p>The class to represent a collection of REST reference links.</p>
+
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		links
+	</td>
+		<td>
+
+			<p>
+	object
+
+			</p>
+
+	
+		</td>
+	<td>
+		<p>The readonly view of the links.  Because Reference links are readonly, we only want to expose them as read only.</p>
+
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="resourceref">Resource<wbr>Ref</h3>
+			
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		id
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		url
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+				</tbody></table>
+			<h3 id="versioncontrolchangetype">Version<wbr>Control<wbr>Change<wbr>Type</h3>
+			<p>The type of change that was made to the item.</p>
+
+				<table class="parameters definitions">
+					<tbody><tr>
+						<th>Name</th>
+							<th>Type</th>
+						<th>Description</th>
+					</tr>
+<tr>
+	<td>
+		add
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		all
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		branch
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		delete
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		edit
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		encoding
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		lock
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		merge
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		none
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		property
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		rename
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		rollback
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		sourceRename
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		targetRename
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+<tr>
+	<td>
+		undelete
+	</td>
+		<td>
+
+			<p>
+	string
+
+			</p>
+
+	
+		</td>
+	<td>
+		
+	</td>
+</tr>
+				</tbody></table>
+
+
+</section>
+</div><div id="ms--inline-notifications" class="margin-block-xs" data-bi-name="inline-notification"></div><div id="assertive-live-region" role="alert" aria-live="assertive" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<div id="polite-live-region" role="status" aria-live="polite" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<!-- </content> -->
+
+						</main><!-- recommendations section --><!-- end recommendations section -->
+
+						<!-- feedback section --><section class="feedback-section position-relative" data-bi-name="feedback-section">
+    <h2 id="feedback" class="title is-3 margin-top-sm">Feedback</h2>
+
+    <div class="alert choose-feedback-type padding-bottom-sm">
+		<p id="git-issues-deprecation-notice">
+			<span class="icon margin-right-xxs" aria-hidden="true">
+				<span class="docon docon-status-info-outline">
+			</span>
+			</span>Coming soon: Throughout 2024 we will be phasing out GitHub Issues as the feedback mechanism for content and replacing it with a new feedback system. For more information see: <a href="https://aka.ms/ContentUserFeedback" data-bi-name="content-user-feedback">https://aka.ms/ContentUserFeedback</a>.</p>
+
+        <p id="send-feedback-about" class="margin-top-sm">Submit and view feedback for</p>
+
+        <div class="choose-feedback-buttons buttons margin-top-xs"><a class="button has-external-link-indicator feedback-type-product" aria-label="Send feedback about this product" href="https://developercommunity.visualstudio.com/spaces/21/index.html" data-bi-name="product-feedback">
+                    <span>This product</span>
+                </a><a class="button feedback-type-product github-link" aria-label="Send feedback about this page" data-bi-name="create-issue-on-github">
+				<span class="icon" aria-hidden="true">
+					<span class="docon docon-brand-github"></span>
+				</span>
+				<span>This page</span>
+			</a>
+        </div>
+    </div>
+
+    <div class="action-container display-flex justify-content-flex-end margin-block-xxs">
+        <a class="view-on-github has-external-link-indicator" data-bi-name="view-on-github" href="https://github.com/MicrosoftDocs/vsts-rest-api-specs/issues">
+            <span aria-hidden="true" class="docon docon-brand-github"></span>
+            <span>View all page feedback</span>
+        </a>
+    </div>
+</section><!-- end feedback section -->
+
+						<!-- feedback report section --><!-- end feedback report section --><div class="border-top is-visible-interactive has-default-focus margin-top-sm "><footer id="footer-interactive" data-bi-name="footer" class="footer-layout"><div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop"><a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-sm button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a><div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+<a
+	href="https://aka.ms/yourcaliforniaprivacychoices"
+	class="button button-sm button-clear flex-shrink-0"
+	data-mscc-ic="false"
+	data-bi-name="your-privacy-choices"
+>
+	<svg
+		role="img"
+		aria-label="California Consumer Privacy Act (CCPA) Opt-Out Icon"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 30 14"
+		xml:space="preserve"
+		height="16"
+		width="43"
+		focusable="false"
+	>
+		<title>California Consumer Privacy Act (CCPA) Opt-Out Icon</title>
+		<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+		<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+		<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+		<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+	</svg>
+	<span>Your Privacy Choices</span>
+</a>
+
+		</div>
+		<div class="flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>Light</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>Dark</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>High contrast</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li><li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/previous-versions/" data-bi-name="archivelink">Previous Versions</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/contribute/" data-bi-name="contributorGuide">Contribute</a></li><li><a class="external-link-indicator" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy</a></li><li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li><li><a class="external-link-indicator" data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Trademarks</a></li><li>&copy; Microsoft 2024</li>
+	</ul>
+</footer></div></div><div
+							id="ms--additional-resources"
+							class="right-container column is-4-desktop display-none display-block-desktop"
+							data-bi-name="pageactions"
+							role="complementary"
+							aria-label="Additional resources"
+						>
+							<div id="affixed-right-container" class="margin-top-sm-tablet" data-bi-name="right-column">
+								<h2 id="ms--additional-resources-heading" class="title is-6 margin-top-md" hidden>Additional resources</h2>
+								<section id="right-rail-events" data-bi-name="events-card" hidden></section>
+								<section id="right-rail-training" data-bi-name="learning-resources-card" hidden></section>
+								<section id="right-rail-recommendations" data-bi-name="recommendations" hidden></section>
+								<nav id="side-doc-outline" class="doc-outline" data-bi-name="intopic toc" aria-label="In this article">
+									<h3>In this article</h3>
+								</nav>
+								<section id="right-rail-qna" class="margin-top-xxs" data-bi-name="qna-link-card" hidden></section>
+							</div>
+						</div></div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive margin-top-sm "><footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo"><div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop"><a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-sm button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a><div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+<a
+	href="https://aka.ms/yourcaliforniaprivacychoices"
+	class="button button-sm button-clear flex-shrink-0"
+	data-mscc-ic="false"
+	data-bi-name="your-privacy-choices"
+>
+	<svg
+		role="img"
+		aria-label="California Consumer Privacy Act (CCPA) Opt-Out Icon"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 30 14"
+		xml:space="preserve"
+		height="16"
+		width="43"
+		focusable="false"
+	>
+		<title>California Consumer Privacy Act (CCPA) Opt-Out Icon</title>
+		<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+		<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+		<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+		<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+	</svg>
+	<span>Your Privacy Choices</span>
+</a>
+
+		</div>
+		<div class="flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>Light</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>Dark</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>High contrast</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li><li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/previous-versions/" data-bi-name="archivelink">Previous Versions</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/contribute/" data-bi-name="contributorGuide">Contribute</a></li><li><a class="external-link-indicator" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy</a></li><li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li><li><a class="external-link-indicator" data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Trademarks</a></li><li>&copy; Microsoft 2024</li>
+	</ul>
+</footer>
+
+	</section><div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+</body>
+</html>
+
